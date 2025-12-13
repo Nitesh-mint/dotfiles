@@ -113,10 +113,10 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/opt/homebrew/bin:$PATH
 
 #Flutter
-export PATH="$PATH:/Users/niteshmint/Downloads/flutter/bin"
+# export PATH="$PATH:/Users/niteshmint/Downloads/flutter/bin"
 
 # Dart
-export PATH="$PATH:$(brew --prefix dart)/libexec/bin"
+# export PATH="$PATH:$(brew --prefix dart)/libexec/bin"
 
 #Python-virtualEnv
 # Load pyenv automatically
@@ -142,14 +142,15 @@ alias la='ls -a'
 
 export PATH=$PATH:/Users/niteshmint/.spicetify
 export EDITOR="nvim"
+
 #for flutter
-export PATH=$HOME/dev/flutter/bin:$PATH
+# export PATH=$HOME/dev/flutter/bin:$PATH
 #java path
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 # android_home environment variables 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
