@@ -64,7 +64,3 @@ To use this configuration, you will need to install `tpm` and add the plugins to
 My `p10k` configuration is designed to be clean and informative. It shows the current git branch, the status of the repository, and the current Kubernetes context.
 
 To use this configuration, you will need to install the [Nerd Fonts](https://www.nerdfonts.com/) and configure your terminal to use them.
-
-## Contributing
-
-Feel free to open an issue or pull request if you have any suggestions or improvements.
