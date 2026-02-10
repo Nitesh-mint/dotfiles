@@ -120,11 +120,11 @@ export PATH=/opt/homebrew/bin:$PATH
 
 #Python-virtualEnv
 # Load pyenv automatically
-#if command -v pyenv 1>/dev/null 2>&1; then
-  #eval "$(pyenv init --path)"
-  #eval "$(pyenv init -)"
-  #eval "$(pyenv virtualenv-init -)"
-#fi
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init --path)"
+#   eval "$(pyenv init -)"
+#   eval "$(pyenv virtualenv-init -)"
+# fi
 
 
 
@@ -139,8 +139,6 @@ alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 
-
-export PATH=$PATH:/Users/niteshmint/.spicetify
 export EDITOR="nvim"
 
 #for flutter
@@ -155,3 +153,16 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by Antigravity
+export PATH="/Users/niteshraya/.antigravity/antigravity/bin:$PATH"
+
+# vim = nvim
+alias vim='nvim'
+
+# Add to ~/.zshrc
+export PATH="$HOME/.pyenv/shims:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+alias myip="curl http://ipecho.net/plain; echo"
