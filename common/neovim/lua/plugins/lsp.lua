@@ -13,7 +13,7 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"hrsh7th/cmp-nvim-lua",
-        "nvimdev/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 	},
 	config = function()
 		local lsp_zero = require("lsp-zero")
@@ -28,7 +28,7 @@ return {
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			-- ensure_installed = { "eslint", "pyright", "csharp_ls", "ts_ls" }, with c# lsp
-			ensure_installed = { "eslint", "pyright", "ts_ls" },
+			ensure_installed = { "eslint", "pyright", "ts_ls", "omnisharp" },
 			handlers = {
 				function(server_name)
 					if server_name == "tsserver" then
@@ -58,15 +58,27 @@ return {
 								},
 							},
 						})
+					elseif server_name == "omnisharp" then
+						require("lspconfig").omnisharp.setup({
+							cmd = { "omnisharp" }, -- Mason handles path
+							enable_roslyn_analyzers = true,
+							organize_imports_on_format = true,
+							enable_import_completion = true,
+
+							on_attach = function(client, bufnr)
+								lsp_zero.default_keymaps({ buffer = bufnr })
+								vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr })
+							end,
+						})
 					else
 						require("lspconfig")[server_name].setup({})
 					end
 				end,
 			},
 		})
-        
-        -- LSPSaga setup if needed (mentioned in packer)
-        require("lspsaga").setup({})
+
+		-- LSPSaga setup if needed (mentioned in packer)
+		require("lspsaga").setup({})
 
 		-- configure autocomplete
 		local cmp = require("cmp")
@@ -79,9 +91,9 @@ return {
 			},
 			sources = {
 				{ name = "nvim_lsp" },
-                { name = "luasnip" },
-                { name = "buffer" },
-                { name = "path" },
+				{ name = "luasnip" },
+				{ name = "buffer" },
+				{ name = "path" },
 			},
 		})
 	end,

@@ -15,7 +15,6 @@ return {
 		end,
 	},
 	{ "ThePrimeagen/vim-be-good" },
-	{ "OmniSharp/omnisharp-vim" },
 	{ "tpope/vim-commentary" },
 	{ "Mofiqul/dracula.nvim" },
 }

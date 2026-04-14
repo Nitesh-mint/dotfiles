@@ -22,3 +22,6 @@ vim.keymap.set("n", "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", { desc = "Cl
 --- 'x' is for Visual Mode, 'gs' is the key, the <Plug> is the internal function
 vim.keymap.set("x", "gs", "<Plug>(nvim-surround-visual)", { desc = "Surround selection" })
 vim.keymap.set("x", "gS", "<Plug>(nvim-surround-visual-line)", { desc = "Surround selection (newline)" })
+
+--Lsps
+vim.keymap.set("n", "<leader>ca", ":Lspsaga code_action<CR>", { silent = true, noremap = true, desc = "Code Action" })
