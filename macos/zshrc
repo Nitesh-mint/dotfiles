@@ -143,12 +143,14 @@ export EDITOR="nvim"
 
 #for flutter
 # export PATH=$HOME/dev/flutter/bin:$PATH
-#java path
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-# android_home environment variables 
-# export ANDROID_HOME=$HOME/Library/Android/sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
+# Java 17 Configuration
+export JAVA_HOME=$(brew --prefix openjdk@17)
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Android Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -166,3 +168,9 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 alias myip="curl http://ipecho.net/plain; echo"
+
+#metasploit framework 
+export PATH="/opt/metasploit-framework/bin:$PATH"
+
+export PATH=$PATH:$ANDROID_HOME/build-tools/36.1.0
+export PATH="$HOME/.local/bin:$PATH"
